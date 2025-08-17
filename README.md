@@ -1,6 +1,7 @@
 # Intro
-A blank WordPress theme integrated with the following features:
+An interview task from CBTW.
 
+External tools:
 - Docker environment
 - Webpack for converting Sass to CSS
 - BrowserSync to automatically reload the browser whenever you save your code
