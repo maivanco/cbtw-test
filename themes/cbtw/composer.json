@@ -1,0 +1,26 @@
+{
+    "name": "wordpress/cbtw-theme",
+    "description": "A custom WordPress theme using Composer.",
+    "type": "wordpress-theme",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+      {
+        "name": "Mike T",
+        "email": "mike@example.com"
+      }
+    ],
+    "require": {
+      "php": ">=7.4",
+      "composer/installers": "^2.2"
+    },
+    "autoload": {
+      "psr-4": {
+        "MyTheme\\": "inc/modules/"
+      }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}

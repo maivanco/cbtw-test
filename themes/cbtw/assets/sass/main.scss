@@ -1,0 +1,240 @@
+/* Reset + Variables */
+@import './variables.scss';
+@import './reset.scss';
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.d-flex{
+    display: flex;
+}
+.d-inline{
+    display: inline-block;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.align-center{
+    align-items: center;
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+
+.color-main{
+    color: $color-main;
+}
+.color-white{
+    color: $color-white;
+}
+.bg-dark{
+    background-color: $bg-dark;
+}
+
+.bg-main-color{
+    background-color: $color-main;
+}
+.bg-white{
+    background-color: $color-white;
+}
+
+.bg-gray{
+    background-color: $color-gray;
+}
+
+.border-radius{
+    border-radius: 20px;
+}
+
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align:right;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+
+
+#site-header{
+    padding: 20px 0;
+    background: $color-white;
+    
+}
+.btn{
+    display:inline-block;
+    padding:10px 20px;
+    background: $color-main;
+    color: $color-white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    &.btn-white{
+        background: $color-white;
+        color: $color-main;
+    }
+    &.rounded{
+        border-radius: 30px;
+    }
+}
+.list-menu{
+    > li{
+        display: inline-block;
+        margin-left: 20px;
+    }
+}
+
+.sec-banner{
+    padding:80px 0;
+    .banner-content{
+        max-width:800px;
+        margin:0 auto;
+        > *{
+            margin:15px 0;
+        }
+    }
+}
+
+#page-detail{
+    margin-top:15px;
+    margin-bottom:15px;
+    .page-wrapper{
+        margin:15px 0;
+        padding:30px;
+        @include mobile{
+            padding:30px 15px;
+        }
+    }
+}
+
+
+#site-footer{
+    padding:30px 0;
+    a{
+        color: $color-white;
+    }
+}
+
+
+
+.sec-banner{
+    &.small{
+        padding:25px 0;
+    }
+}
+
+.sec-list-products{
+    > *{
+        margin:20px 0;
+    }
+    .list-products{
+        @include mobile{
+            gap:20px;
+        }
+        .col{
+            width:33.33%;
+            padding:10px;
+           
+            @include mobile{
+                width:100%;
+                padding:0;
+            }
+        }
+    }
+}
+.price-discount{
+    color:red;
+}
+
+.item-product{
+    max-width:360px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:20px;
+    box-shadow:0px 3px 3px rgba(0,0,0,0.3);
+    > *{
+        margin:10px 0;
+    }
+    .image{
+        img{
+            display:block;
+            margin:0 auto;
+        }
+    }
+    .short-desc{
+        display: -webkit-box;
+        -webkit-line-clamp: 2; 
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .wrapper-price{
+        margin:20px 0;
+    }
+    .view-product{
+        display:block;
+    }
+}
+
+.single-product{
+    .product-category{
+        margin-bottom:30px;
+    }
+    .wrapper-product-info{
+        > * {
+            max-width:50%;
+            paddng:0 15px;
+            @include mobile{
+                max-width:100%;
+                padding:0;
+            }
+        }
+        .side-left{
+            img{
+                background: $color-gray;
+                border-radius: 10px;
+                width:100%;
+                display:block;
+            }
+        }
+        .side-right{
+            padding-left:30px;
+            @include mobile{
+                padding:30px 0 0 0;
+            }
+        }
+    }
+    .thumbnail{
+        margin-bottom:10px;
+    }
+    .product-gallery{
+        .list{
+            margin:0 -5px;
+            .item-product-gallery{
+                width:25%;
+                padding:0 5px;
+            }
+        }
+    }
+    .product-price{
+        margin: 20px 0 30px;
+    }
+    .related-products{
+        border-top:1px solid $color-gray;
+        padding-top:10px;
+        margin-top:30px;
+    }
+}
+
+@import '../../elementor-widgets/product-gallery/main.scss';
